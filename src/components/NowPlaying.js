@@ -47,8 +47,8 @@ const NowPlaying = ({ currentSong, playNext, playPrevious, setOrder, order }) =>
 
       setHowl(newHowl);
       setProgress(0);
-      setIsPlaying(true); 
-    }
+      
+      }
 
     return () => {
       cancelAnimationFrame(animationRef.current); 
@@ -64,6 +64,7 @@ const NowPlaying = ({ currentSong, playNext, playPrevious, setOrder, order }) =>
   };
 
   const handlePlayPause = () => {
+    console.log('howl: ',howl);
     if (!howl) return;
 
     if (isPlaying) {
